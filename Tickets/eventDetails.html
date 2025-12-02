@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <!-- We link your main stylesheet for the Navbar -->
+    <link rel="StyleSheet" href="StyleSheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- INTERNAL CSS (Styles specific to this page only) -->
+    <style>
+        body {
+            background-color: #F3F4F6;
+        }
+
+        /* Center the main box on the screen */
+        .details-container {
+            max-width: 800px;
+            margin: 120px auto 50px auto; /* Top margin accounts for fixed navbar */
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Style the Event Image */
+        .details-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Text Styles */
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-box {
+            background-color: #f9f9f9;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+            border-left: 5px solid #ae23d4; /* Purple accent */
+        }
+
+            .info-box p {
+                font-size: 18px;
+                margin: 10px 0;
+                color: #555;
+            }
+
+            .info-box strong {
+                color: #333;
+                width: 150px;
+                display: inline-block;
+            }
+
+        /* Special style for the Singer section (initially hidden) */
+        #singerSection {
+            display: none;
+            background-color: #fff0f5; /* Light pink background for emphasis */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Button Styles */
+        .book-btn {
+            background-color: #333;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+            .book-btn:hover {
+                background-color: #ae23d4; /* Purple on hover */
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar (Same as your other pages) -->
+    <nav class="navbar">
+        <span class="logo"><a href="Home.html">TickWizard</a></span>
+        <ul class="navlist">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="eventList.html">Events</a></li>
+            <li><a href="addEvent.html">Add Event</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+        </ul>
+        <input type="text" id="search" placeholder="Search events..." />
+        <a id="list" href="Profile.html"><i class="fa-notdog fa-solid fa-user"></i></a>
+    </nav>
+
+    <!-- Main Details Content -->
+    <div class="details-container">
+        <!-- Image will be set by JavaScript -->
+        <img id="eventImage" src="" alt="Event Image" class="details-img">
+
+        <h1 id="eventName">Event Name Loading...</h1>
+
+        <div class="info-box">
+            <p><strong>Organizer:</strong> <span id="organizerName">Loading...</span></p>
+            <p><strong>Venue:</strong> <span id="venueName">Grand City Hall, Main Auditorium</span></p>
+            <p><strong>Price:</strong> <span id="priceTag">$50.00</span></p>
+
+            <!-- This section only shows up if it is a Concert -->
+            <p id="singerSection"><strong>Performing:</strong> <span id="singerName"></span></p>
+
+            <p><strong>Description:</strong> <span id="eventDesc">Join us for an amazing experience. This event promises to be unforgettable!</span></p>
+        </div>
+
+        <button onclick="goToReservation()" class="book-btn">Book Seats Now</button>
+    </div>
+
+    <!-- INTERNAL JAVASCRIPT -->
+    <script>
+        // 1. When the page loads, run this function
+        window.onload = function() {
+
+            // Get data saved from the previous page (LocalStorage)
+            // If no data is found (e.g. opened directly), use default values
+            const eventName = localStorage.getItem("currentEventName") || "Music Concert";
+            const eventImg = localStorage.getItem("currentEventImage") || "music_concert.png";
+            const eventType = localStorage.getItem("currentEventType") || "Concert";
+
+            // 2. Set the Image and Name on the screen
+            document.getElementById("eventName").innerText = eventName;
+            document.getElementById("eventImage").src = eventImg;
+
+            // 3. Random Organizer Name Generator
+            const organizers = ["Elite Events Co.", "City Vibes", "Star Gatherings", "Creative Minds Inc.", "NextGen Planners"];
+            const randomOrg = organizers[Math.floor(Math.random() * organizers.length)];
+            document.getElementById("organizerName").innerText = randomOrg;
+
+            // 4. Random Venue Generator
+            const venues = ["Central Park Arena", "Royal Dome", "Downtown Convention Center", "Skyline Hall"];
+            const randomVenue = venues[Math.floor(Math.random() * venues.length)];
+            document.getElementById("venueName").innerText = randomVenue;
+
+            // 5. Logic: If it is a "Concert", show the Singer Name
+            if (eventType === "Concert") {
+                const singers = ["The Weekend Star", "Ariana Vibes", "Rock Legends", "Jazz Masters"];
+                const randomSinger = singers[Math.floor(Math.random() * singers.length)];
+
+                document.getElementById("singerName").innerText = randomSinger;
+                document.getElementById("singerSection").style.display = "block"; // Make it visible
+            } else {
+                document.getElementById("singerSection").style.display = "none"; // Hide it
+            }
+        };
+
+        // 6. Button Function to go to Seat Reservation
+        function goToReservation() {
+            window.location.href = "seatReserve.html";
+        }
+    </script>
+
+</body>
+</html>

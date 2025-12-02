@@ -69,7 +69,7 @@ body {
     position: relative;
     background-color: rgb(8, 8, 8);
     color: white;
-    padding: 10px 17px 5px 17px;
+    padding: 5px 17px 5px 17px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -79,32 +79,7 @@ body {
         background-color: azure;
         color: rgb(8, 8, 8);
     }
-.dropdown {
-    display: none;
-    position: absolute;
-    right : 0;
-    top : 100%;
-    background-color: aqua;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
-    z-index : 1;
-}
-#list:hover .dropdown {
-    display: block;
-    background-color: antiquewhite;
-}
-.dropdown a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display : block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-weight : 400;
-}
-    .dropdown a:hover {
-        background-color : azure;
-    }
+
 
     /*Body*/
 .homeBox {

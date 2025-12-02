@@ -23,4 +23,5 @@ form.addEventListener('submit', function (event) {
     // 4. If everything is okay, hide the form and show success
     form.style.display = 'none';
     successMessage.style.display = 'block';
+
 });
