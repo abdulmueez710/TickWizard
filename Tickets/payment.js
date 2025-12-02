@@ -1,28 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('paymentForm');
-    const successMessage = document.getElementById('successMessage');
 
-    document.getElementById('cardNumber').addEventListener('input', function(e){
-        let value = e.target.value.replace(/\D/g,'');
-        let formattedValue = value.replace(/(\d{4})(?=\d)/g,'$1 ');
-        e.target.value = formattedValue;
-    });
+// Get the form and the success message div
+const form = document.getElementById('paymentForm');
+const successMessage = document.getElementById('successMessage');
 
-    document.getElementById('expiryDate').addEventListener('input', function(e){
-        let value = e.target.value.replace(/\D/g,'');
-        if(value.length>2){ value=value.slice(0,2)+'/'+value.slice(2); }
-        e.target.value = value;
-    });
+// Listen for when the "Pay Now" button is clicked
+form.addEventListener('submit', function (event) {
 
-    document.getElementById('cvv').addEventListener('input', function(e){
-        e.target.value = e.target.value.replace(/\D/g,'');
-    });
+    // 1. Stop the page from refreshing
+    event.preventDefault();
 
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-        const inputs=form.querySelectorAll('input');
-        let isValid=true;
-        inputs.forEach(input=>{ if(!input.value.trim()){ isValid=false; input.style.borderColor='red'; } else{ input.style.borderColor='#ddd'; } });
-        if(isValid){ form.style.display='none'; successMessage.style.display='block'; }
-    });
+    // 2. Get the values from the inputs
+    const name = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const card = document.getElementById('cardNumber').value;
+
+    // 3. Simple Check: Are any of them empty?
+    if (name === "" || email === "" || card === "") {
+        alert("Please fill in all fields!");
+        return; // Stop here if empty
+    }
+
+    // 4. If everything is okay, hide the form and show success
+    form.style.display = 'none';
+    successMessage.style.display = 'block';
 });
