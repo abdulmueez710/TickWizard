@@ -1,26 +1,24 @@
-
-// Get the form and the success message div
 const form = document.getElementById('paymentForm');
 const successMessage = document.getElementById('successMessage');
 
-// Listen for when the "Pay Now" button is clicked
+// When the user clicks "Pay Now"
 form.addEventListener('submit', function (event) {
 
-    // 1. Stop the page from refreshing
+    // Stop the page from reloading
     event.preventDefault();
 
-    // 2. Get the values from the inputs
+    // Grab the info the user typed
     const name = document.getElementById('fullName').value;
     const email = document.getElementById('email').value;
     const card = document.getElementById('cardNumber').value;
 
-    // 3. Simple Check: Are any of them empty?
+    // Make sure nothing is left blank
     if (name === "" || email === "" || card === "") {
         alert("Please fill in all fields!");
-        return; // Stop here if empty
+        return; // Stop if anything is empty
     }
 
-    // 4. If everything is okay, hide the form and show success
+    // Hide the form and show a success message
     form.style.display = 'none';
     successMessage.style.display = 'block';
 
