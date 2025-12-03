@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,8 +102,7 @@
               "RelativeToolTip": "Home.html",
               "ViewState": "AgIAACgAAAAAAAAAAAAgwDIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-12-02T16:09:24.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T16:09:24.988Z"
             },
             {
               "$type": "Document",
@@ -155,6 +154,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "contact.html",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\contact.html",
+              "RelativeDocumentMoniker": "contact.html",
+              "ToolTip": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\contact.html",
+              "RelativeToolTip": "contact.html",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-02T13:34:40.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "contact.js",
               "DocumentMoniker": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\contact.js",
@@ -163,21 +175,7 @@
               "RelativeToolTip": "contact.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-12-02T13:34:42.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StyleSheet.css",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\StyleSheet.css",
-              "RelativeDocumentMoniker": "StyleSheet.css",
-              "ToolTip": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\StyleSheet.css",
-              "RelativeToolTip": "StyleSheet.css",
-              "ViewState": "AgIAAFMBAAAAAAAAAAAiwFUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-30T11:06:35.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T13:34:42.491Z"
             },
             {
               "$type": "Document",
@@ -199,12 +197,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "5b6c7e51-9aa0-4d06-9d75-caac80bc1094",
+        "Id": "562dd3cb-a89d-4658-9999-09c9f4863009",
         "Display": 0,
-        "X": -42,
-        "Y": 109,
-        "Width": 754,
-        "Height": 546,
+        "X": 465,
+        "Y": 324,
+        "Width": 750,
+        "Height": 544,
         "WindowState": 0
       },
       "DocumentGroups": [
@@ -214,15 +212,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "contact.html",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\contact.html",
-              "RelativeDocumentMoniker": "contact.html",
-              "ToolTip": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\contact.html",
-              "RelativeToolTip": "contact.html",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAwwIkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-12-02T13:34:40.772Z",
+              "DocumentIndex": 1,
+              "Title": "StyleSheet.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\StyleSheet.css",
+              "RelativeDocumentMoniker": "StyleSheet.css",
+              "ToolTip": "C:\\Users\\hp\\source\\Web Development\\Tickets\\Tickets\\Tickets\\StyleSheet.css",
+              "RelativeToolTip": "StyleSheet.css",
+              "ViewState": "AgIAAJsBAAAAAAAAAADwv5IBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-30T11:06:35.51Z",
               "EditorCaption": ""
             }
           ]
