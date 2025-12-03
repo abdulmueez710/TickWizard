@@ -40,11 +40,8 @@ function signup() {
 }
 
 
-/* =========================================
-   2. DATA & EVENT LIST LOGIC (NEW & IMPROVED)
-   ========================================= */
+/* 2. DATA & EVENT LIST LOGIC */
 
-// --- A. THE SAMPLE DATA (Our "Database") ---
 const eventsDB = [
     // Concerts
     { name: "Music Concert", type: "Concert", img: "music_concert.png", desc: "A night of rock and pop music." },
@@ -67,9 +64,7 @@ const eventsDB = [
 
 // --- B. FUNCTION CALLED FROM HOME PAGE ---
 function filterCategory(category) {
-    // Save the category the user clicked on
     localStorage.setItem("selectedFilter", category);
-    // Go to the list page
     window.location.href = "eventList.html";
 }
 
